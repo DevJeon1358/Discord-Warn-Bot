@@ -1,0 +1,9 @@
+{
+  "discord": {
+    "token": "TOKEN HERE",
+    "serverId": "TARGET SERVER ID",
+    "warnChannelId": "CHANNEL ID WHERE TO POST NOTIFY MESSAGE",
+    "modRoleId": ["MOD ROLE ID (ROLE ID WHAT CAN ADD WARNS)"],
+    "statusMessage": "STATUS MESSAGE"
+  }
+}
