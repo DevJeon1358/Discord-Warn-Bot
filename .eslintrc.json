@@ -8,6 +8,8 @@
     "@typescript-eslint/camelcase": "off",
     "no-console": "off",
     "consistent-return": "off",
-    "linebreak-style": ["error", "windows"]
+    "class-methods-use-this": "off",
+    "linebreak-style": ["error", "windows"],
+    "@typescript-eslint/no-unused-vars": "warn"
   }
 }

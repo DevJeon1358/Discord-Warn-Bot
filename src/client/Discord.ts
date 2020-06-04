@@ -6,6 +6,7 @@ interface DiscordConfig {
   warnChannelId: string,
   modRoleId: Array<string>,
   statusMessage: string,
+  commandPrefix: string,
 }
 
 class DiscordClient extends Discord.Client {
