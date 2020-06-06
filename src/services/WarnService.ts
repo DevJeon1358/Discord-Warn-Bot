@@ -1,9 +1,16 @@
+import { Repository } from 'typeorm';
 import Warn from '../models/Warn';
 import WarnRepository from '../repository/Warn';
 
 class WarnService {
+  private warnRepository: Repository<Warn>;
+
+  constructor() {
+    this.warnRepository = WarnRepository.getRepository();
+  }
+
   public async getWarns(did: string): Promise<Warn[]> {
-    const warnResult = WarnRepository.find({
+    const warnResult = this.warnRepository.find({
       where: {
         did,
       },
@@ -13,7 +20,7 @@ class WarnService {
   }
 
   public async getModWarns(modDid: string): Promise<Warn[]> {
-    const warnResult = WarnRepository.find({
+    const warnResult = this.warnRepository.find({
       where: {
         modDid,
       },
@@ -23,7 +30,7 @@ class WarnService {
   }
 
   public async getWarnCount(did: string): Promise<number> {
-    const warnResult = await WarnRepository.findAndCount({
+    const warnResult = await this.warnRepository.findAndCount({
       where: {
         did,
       },
@@ -38,7 +45,7 @@ class WarnService {
     warn.modDid = modDid;
     warn.reason = reason;
 
-    const addResult = WarnRepository.save(warn);
+    const addResult = this.warnRepository.save(warn);
     return addResult;
   }
 
@@ -46,7 +53,7 @@ class WarnService {
     const removeEntity = new Warn();
     removeEntity.id = id;
 
-    return WarnRepository.remove(removeEntity);
+    return this.warnRepository.remove(removeEntity);
   }
 }
 
