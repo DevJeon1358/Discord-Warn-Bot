@@ -14,7 +14,7 @@ const handler = async (message: Message) => {
       const commandPrefixLowercase = `${client.config.commandPrefix}${c.toLowerCase()}`;
 
       if (contentLowercase.startsWith(commandPrefixLowercase)) {
-        Commands[c](message);
+        Commands[c](message, client);
       }
     });
   }

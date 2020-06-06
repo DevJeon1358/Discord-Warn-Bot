@@ -12,6 +12,7 @@
     "colors": "^1.4.0",
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
+    "sqlite3": "^4.2.0",
     "typeorm": "^0.2.25",
     "typescript": "^3.9.3"
   },

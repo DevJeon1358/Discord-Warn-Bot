@@ -105,3 +105,6 @@ dist
 
 # Config Folder
 config/**/*.json
+
+# Database Files
+DB/**/*.sqlite
