@@ -6,7 +6,7 @@ import colorConsole from '../utils/colorConsole';
 
 class DiscordLoader {
   public static async load() {
-    colorConsole.gray('[DISCORD] Initing Bot test');
+    colorConsole.gray('[DISCORD] Initing Bot');
 
     const client = new DiscordClient();
     type eventKeys = keyof ClientEvents;
